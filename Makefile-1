@@ -1,0 +1,2 @@
+all:
+	gcc main.c variant.c -o hello.exe
