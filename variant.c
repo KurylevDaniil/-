@@ -1,31 +1,33 @@
- #include <stdio.h>
+#include <stdio.h>
+#define 	N 5
 #include"variant.h"
 
  
 int variant (){
 
-	int x[3] = {1,2,3}, y[3] = {5,6,7}, a,b,c,d,e,f;
-	a = x[0];
-	b = y[0];
-	a=a+b;
-	b=a-b;
-	a=a-b;
-	printf("a=%i, b=%i\n", a, b );
+	int x[N]; 
+	int y[N];
+	int j,i;
 
-	c = x[1];
-	d = y[1];
-	c=c+d;
-	d=c-d;
-	c=c-d;
-	printf("a=%i, b=%i\n", c, d );
+	for(int i = 0; i < N; i++) {
+		x[i] = i % 3;
+		
+	}
 
-	e = x[2];
-	f = y[2];
-	e=e+f;
-	f=e-f;
-	e=e-f;
-	printf("a=%i, b=%i\n", e, f );
-
+	for (int i = 0; i < N; i++) {
+		y[i] = i + 4;
+		
+	}
+	for (int i = 0; i < N; i++){
+		printf("x = %i, y = %i\n", x[i], y[i]);
+		x[i]=x[i]+y[i];
+		y[i]=x[i]-y[i];
+		x[i]=x[i]-y[i];
+		
+	}
+	for (int i = 0; i < N; i++){
+		printf("x = %i, y = %i\n", x[i], y[i] );
+    }
 	return 0;
 
 }

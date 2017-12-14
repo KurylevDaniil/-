@@ -4,7 +4,7 @@
 
  int main()
 {
-	printf("2 arrays a = 1,2,3 ; b = 5,6,7 -> flip\n");
+	printf("создаем два массива, меняем местами\n");
 	variant();	        	       
 	return 0; 
 }		  
